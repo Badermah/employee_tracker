@@ -24,7 +24,7 @@ function inital() {
             "Add role",
             "Add employee",
             "View departments",
-            "View roles",
+            "View role",
             "View employees",
             "Update employee role",
             "Exit"
@@ -47,8 +47,8 @@ function inital() {
             case "View departments":
                viewDepartment();
                break;
-            case "View roles":
-               viewRoles();
+            case "View role":
+               viewRole();
                break;
             case "View employees":
                viewEmployees();
@@ -163,8 +163,8 @@ function viewDepartment() {
       inital();
    });
 }
-function viewRoles() {
-   let query = "SELECT * FROM roles";
+function viewRole() {
+   let query = "SELECT * FROM role";
  connection.query(query, function(err, res) {
       if (err) throw err;
       console.table(res);
@@ -176,7 +176,7 @@ function viewEmployees() {
  connection.query(query, function(err, res) {
       if (err) throw err;
       console.table(res);
-      inital;
+      inital();
    });
 }
 function quit() {
